@@ -19,7 +19,7 @@ class Longitude
         }
     }
 
-    public static function fromFloat(float $value)
+    public static function fromFloat(float $value): self
     {
         return new self($value);
     }
