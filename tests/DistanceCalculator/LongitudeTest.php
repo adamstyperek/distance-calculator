@@ -26,4 +26,10 @@ class LongitudeTest extends TestCase
         $longitude = Longitude::fromFloat(180.0);
         $this->assertEquals(180.0, $longitude->getValue());
     }
+
+    public function test_that_longitude_can_be_created_when_string_value_in_range()
+    {
+        $longitude = Longitude::fromString('180.0');
+        $this->assertEquals('180.0', $longitude->toString(1));
+    }
 }

@@ -24,9 +24,19 @@ class Longitude
         return new self($value);
     }
 
+    public static function fromString(string $value): self
+    {
+        return new self((string)$value);
+    }
+
     public function getValue(): float
     {
         return (float)$this->value;
+    }
+
+    public function toString(int $withPrecision): string
+    {
+        return number_format($this->value, $withPrecision);
     }
 
 }
