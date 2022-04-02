@@ -34,9 +34,9 @@ class Latitude
         return (float)$this->value;
     }
 
-    public function toString(): string
+    public function toString(int $withPrecision): string
     {
-        return (string)$this->value;
+        return number_format($this->value, $withPrecision);
     }
 
 }

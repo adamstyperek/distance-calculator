@@ -21,9 +21,16 @@ class LatitudeTest extends TestCase
         Latitude::fromFloat(90.01);
         $this->assertTrue(true);
     }
+
     public function test_that_latitude_can_be_created_when_value_in_range()
     {
         $latitude = Latitude::fromFloat(90.0);
         $this->assertEquals(90.0, $latitude->getValue());
+    }
+
+    public function test_that_latitude_can_be_created_when_string_value_in_range()
+    {
+        $latitude = Latitude::fromString('90.0');
+        $this->assertEquals('90.0', $latitude->toString(1));
     }
 }
