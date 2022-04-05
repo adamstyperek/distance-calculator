@@ -49,6 +49,8 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+$app->bind(\App\DistanceCalculator\DistanceCalculator::class, \App\DistanceCalculator\HeversineDistanceCalculator::class);
+
 /*
 |--------------------------------------------------------------------------
 | Register Config Files

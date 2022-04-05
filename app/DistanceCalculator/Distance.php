@@ -38,7 +38,7 @@ class Distance
 
     public function toString(): string
     {
-        return number_format($this->value, 0);
+        return number_format($this->value, 0, '.', '');
     }
 
     public function toKilometers(int $withPrecision): float

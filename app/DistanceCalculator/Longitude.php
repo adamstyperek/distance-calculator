@@ -26,7 +26,7 @@ class Longitude
 
     public static function fromString(string $value): self
     {
-        return new self((string)$value);
+        return new self((float)$value);
     }
 
     public function getValue(): float
